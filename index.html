@@ -95,16 +95,7 @@ section{padding:110px 24px}
 .photo-card{break-inside:avoid;margin-bottom:20px;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 4px 22px var(--shadow);background:var(--sand);transition:transform .3s,box-shadow .3s}
 .photo-card:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(44,33,24,.18)}
 .photo-card-img{width:100%;display:block;object-fit:cover}
-.photo-placeholder{width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:48px 20px;background:linear-gradient(135deg,var(--sand),var(--warm));color:var(--muted)}
-.ph-icon{font-size:2.4rem;opacity:.45}
-.ph-txt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.92rem;text-align:center}
 .photo-caption{padding:14px 18px 16px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;color:var(--brown);background:white}
-
-.add-photo-btn{break-inside:avoid;margin-bottom:20px;border-radius:18px;border:2px dashed rgba(200,160,160,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:44px 20px;cursor:pointer;transition:border-color .2s,background .2s;min-height:160px;background:transparent}
-.add-photo-btn:hover{border-color:var(--rose-dk);background:var(--blush)}
-.add-photo-btn .apb-icon{font-size:2rem;color:var(--rose-dk)}
-.add-photo-btn .apb-txt{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;color:var(--muted)}
-.add-photo-btn input{display:none}
 
 /* NOTES */
 .notes-section{background:linear-gradient(160deg,#f3eff9 0%,#fdf4f4 55%,#eef4ee 100%)}
@@ -122,27 +113,18 @@ section{padding:110px 24px}
 .note-card.san .note-quote{color:var(--gold)}
 .note-text{font-family:'Cormorant Garamond',serif;font-size:1.08rem;line-height:1.78;color:var(--ink);margin-bottom:22px}
 .note-from{font-family:'Satisfy',cursive;font-size:1.1rem;color:var(--mauve)}
-.note-add{border-radius:22px;padding:30px;border:2px dashed rgba(180,140,180,.35);background:rgba(255,255,255,.5);display:flex;flex-direction:column;gap:14px}
-.note-add textarea,.note-add input[type=text]{width:100%;border:1px solid rgba(180,150,180,.3);border-radius:12px;padding:12px 16px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--ink);background:rgba(255,255,255,.75);outline:none;resize:none;transition:border-color .2s}
-.note-add textarea:focus,.note-add input[type=text]:focus{border-color:var(--mauve)}
-.note-add textarea{min-height:100px}
-.note-add-lbl{font-family:'Satisfy',cursive;color:var(--mauve);font-size:1.15rem}
 
 /* VIDEOS */
 .videos-section{background:var(--cream)}
 .videos-section .section-heading em{color:var(--sage)}
-.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px}
+.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:28px;max-width:900px;margin:0 auto}
 .video-card{border-radius:20px;overflow:hidden;background:white;box-shadow:0 4px 24px var(--shadow);transition:transform .3s,box-shadow .3s}
 .video-card:hover{transform:translateY(-5px);box-shadow:0 16px 44px rgba(44,33,24,.15)}
-.video-frame{width:100%;aspect-ratio:16/9;background:var(--sand);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--muted)}
+.video-frame{width:100%;aspect-ratio:9/16;background:var(--sand);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:10px;color:var(--muted);overflow:hidden}
+.video-frame video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
 .video-frame iframe{width:100%;height:100%;border:none;display:block}
 .video-info{padding:18px 22px}
 .video-info p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1rem;color:var(--brown)}
-.video-add{border-radius:20px;border:2px dashed rgba(120,170,120,.35);background:rgba(255,255,255,.5);padding:30px;display:flex;flex-direction:column;gap:14px}
-.video-add-lbl{font-family:'Satisfy',cursive;color:var(--sage);font-size:1.15rem}
-.video-add-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.95rem;color:var(--muted)}
-.video-add input[type=text]{width:100%;border:1px solid rgba(120,170,120,.3);border-radius:12px;padding:12px 16px;font-family:'Nunito',sans-serif;font-size:.9rem;color:var(--ink);background:rgba(255,255,255,.8);outline:none;transition:border-color .2s}
-.video-add input[type=text]:focus{border-color:var(--sage)}
 
 /* FOOTER */
 footer{background:var(--ink);color:rgba(255,255,255,.45);text-align:center;padding:72px 24px}
@@ -198,10 +180,10 @@ footer{background:var(--ink);color:rgba(255,255,255,.45);text-align:center;paddi
     <h2 class="music-title"><span>Him & I</span> — Halsey & G‑Eazy</h2>
     <p class="music-note">the song that's reminds me us</p>
     <div class="music-player">
-      <iframe src="https://open.spotify.com/embed/track/5p7MJaGklMqOGJcPnYiSCe?utm_source=generator&theme=0"
-        height="100" frameborder="0"
+      <iframe src="https://embed.music.apple.com/us/album/the-beautiful-damned/1308645364?i=1308645368"
+        height="175" frameborder="0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"></iframe>
+        loading="lazy" style="width:100%;overflow:hidden;background:transparent;"></iframe>
     </div>
   </div>
 </section>
@@ -220,30 +202,25 @@ footer{background:var(--ink);color:rgba(255,255,255,.45);text-align:center;paddi
     </div>
     <div class="gallery-masonry" id="photoGrid">
       <div class="photo-card reveal" onclick="openLB(this)">
-        <div class="photo-placeholder"><div class="ph-icon">🌅</div><div class="ph-txt">the beginning of us</div></div>
+        <img class="photo-card-img" src="photos/photo1.jpg" alt="our memory">
         <div class="photo-caption"> the beginning ✨</div>
       </div>
       <div class="photo-card reveal" onclick="openLB(this)">
-        <div class="photo-placeholder" style="padding:64px 20px"><div class="ph-icon">🥂</div><div class="ph-txt">to remember</div></div>
+        <img class="photo-card-img" src="photos/photo2.jpg" alt="our memory">
         <div class="photo-caption">my fav memory </div>
       </div>
       <div class="photo-card reveal" onclick="openLB(this)">
-        <div class="photo-placeholder"><div class="ph-icon">🌙</div><div class="ph-txt">late night adventures</div></div>
+        <img class="photo-card-img" src="photos/photo3.jpg" alt="our memory">
         <div class="photo-caption"> fav date nights🌙</div>
       </div>
       <div class="photo-card reveal" onclick="openLB(this)">
-        <div class="photo-placeholder" style="padding:60px 20px"><div class="ph-icon">☀️</div><div class="ph-txt">moments that make me smile</div></div>
+        <img class="photo-card-img" src="photos/photo4.jpg" alt="our memory">
         <div class="photo-caption">you make everything better</div>
       </div>
       <div class="photo-card reveal" onclick="openLB(this)">
-        <div class="photo-placeholder"><div class="ph-icon">🤍</div><div class="ph-txt">just us</div></div>
+        <img class="photo-card-img" src="photos/photo5.jpg" alt="our memory">
         <div class="photo-caption">just us</div>
       </div>
-      <label class="add-photo-btn reveal">
-        <div class="apb-icon">+</div>
-        <div class="apb-txt">click to add your photos</div>
-        <input type="file" accept="image/*" multiple onchange="addPhotos(this)">
-      </label>
     </div>
   </div>
 </section>
@@ -272,12 +249,12 @@ It’s been the most amazing, most character-developing year. We’ve shared so 
       </div>
       <div class="note-card ros reveal">
         <div class="note-quote">"</div>
-        <p class="note-text">Being with you has brought so much happiness into my life. My heart still gets so full every time I think about us. Thank you for loving me, being patient with me, understanding me, and staying by my side. This past year wasn’t just about memories — it was about growing together and learning each other. We had our ups and downs and went through a lot of hard times, but no matter what, we stayed by each other’s side. I’ll always be grateful that I get to love you.</p>
+        <p class="note-text">Being with you has brought so much happiness into my life. My heart still gets so full every time I think about us. Thank you for loving me, being patient with me, understanding me, and staying by my side. And i want to say i am sorry deeply sorry for sometimes i dont notice your effort or realize your effort later than at that moment, there was a time i was so hard on you.. i didnt mean to i just needed to reflect myself i hope you understand and give me time to develop myself for you. This past year wasn’t just about memories — it was about growing together and learning each other. We had our ups and downs and went through a lot of hard times, but no matter what, we stayed by each other’s side. I’ll always be grateful that I get to love you.</p>
         <p class="note-from">— i love you 🌸</p>
       </div>
       <div class="note-card sag reveal">
         <div class="note-quote">"</div>
-        <p class="note-text">This past year has taught us so many things, and I truly believe we’ve learned a lot from each other. You supported me, helped me grow, and even helped me evolve in so many ways. But most importantly, it’s who you are as a person that made me fall in love with you. I love the way you get emotional — it only makes you look even stronger in my eyes. I love how much you care about my personality, the soft spot you have for me, and the way you treat your mom and dad and take care of them. I also admire how you’re always willing to help others, and how you take care of your physical health, go to the gym, and stay focused on your education.
+        <p class="note-text">This past year has taught us so many things, and I truly believe we’ve learned a lot from each other. You supported me, helped me grow, and even helped me evolve in so many ways. But most importantly, it’s who you are as a person that made me fall in love with you. I love the way you get emotional — it only makes you look even stronger in my eyes. I love how much you care about my personality, the soft spot you have for me, and the way you treat your mom and dad and take care of them. I also admire how you’re always willing to help others, and how you take care of your physical health, go to the gym, and stay focused on your education. 
 </p>
         <p class="note-from">— i am so proud of you✨</p>
       </div>
@@ -288,13 +265,6 @@ It’s been the most amazing, most character-developing year. We’ve shared so 
           Romans 12:10 “Be devoted to one another in love…”
 Song of Solomon 6:3 “I am my beloved’s and my beloved is mine.”</p>
         <p class="note-from">— Ari 💛</p>
-      </div>
-      <!-- add note -->
-      <div class="note-add reveal">
-        <p class="note-add-lbl">write a note ✏️</p>
-        <textarea id="noteText" placeholder="say something sweet..."></textarea>
-        <input type="text" id="noteFrom" placeholder="— from who?">
-        <button class="btn btn-mauve" onclick="addNote()">✦ add note</button>
       </div>
     </div>
   </div>
@@ -317,25 +287,21 @@ Song of Solomon 6:3 “I am my beloved’s and my beloved is mine.”</p>
     <div class="video-grid" id="videoGrid">
       <div class="video-card reveal">
         <div class="video-frame">
-          <span style="font-size:2.2rem;opacity:.25">▶</span>
-          <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.92rem">add a video below</span>
+          <video src="videos/video1.mp4" controls playsinline preload="metadata"></video>
         </div>
         <div class="video-info"><p>our first memory 🎬</p></div>
       </div>
       <div class="video-card reveal">
         <div class="video-frame">
-          <span style="font-size:2.2rem;opacity:.25">▶</span>
-          <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:.92rem">add a video below</span>
+          <video src="videos/video2.mp4" controls playsinline preload="metadata"></video>
         </div>
         <div class="video-info"><p>a moment to keep forever ✨</p></div>
       </div>
-      <!-- add video -->
-      <div class="video-add reveal">
-        <p class="video-add-lbl">add a video 🎞️</p>
-        <p class="video-add-note">paste your link</p>
-        <input type="text" id="videoUrl" placeholder="https://youtube.com/watch?v=...">
-        <input type="text" id="videoCaption" placeholder="caption for this video...">
-        <button class="btn btn-sage" onclick="addVideo()">✦ add video</button>
+      <div class="video-card reveal">
+        <div class="video-frame">
+          <video src="videos/video3.mp4" controls playsinline preload="metadata"></video>
+        </div>
+        <div class="video-info"><p>just being us 🤍</p></div>
       </div>
     </div>
   </div>
@@ -364,58 +330,11 @@ const obs = new IntersectionObserver(entries => {
 }, {threshold:.1});
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// Add photos
-function addPhotos(input){
-  const grid = document.getElementById('photoGrid');
-  const addBtn = grid.querySelector('.add-photo-btn');
-  Array.from(input.files).forEach(file => {
-    const url = URL.createObjectURL(file);
-    const card = document.createElement('div');
-    card.className = 'photo-card';
-    card.innerHTML = `<img class="photo-card-img" src="${url}" alt="memory"><div class="photo-caption">our memory ✨</div>`;
-    card.addEventListener('click', () => { document.getElementById('lbImg').src = url; document.getElementById('lbCaption').textContent='our memory ✨'; document.getElementById('lightbox').classList.add('open'); });
-    grid.insertBefore(card, addBtn);
-  });
-  input.value='';
-}
-
 // Lightbox
 function openLB(el){ const img=el.querySelector('img'); if(!img)return; document.getElementById('lbImg').src=img.src; document.getElementById('lbCaption').textContent=el.querySelector('.photo-caption')?.textContent||''; document.getElementById('lightbox').classList.add('open'); }
 function closeLB(e){ if(!e||e.target===document.getElementById('lightbox')||e.target.classList.contains('lb-close')) document.getElementById('lightbox').classList.remove('open'); }
 document.addEventListener('keydown',e=>{ if(e.key==='Escape') document.getElementById('lightbox').classList.remove('open'); });
 
-// Add note
-const noteTypes=['lav','ros','sag','san']; let ni=0;
-function addNote(){
-  const text=document.getElementById('noteText').value.trim();
-  const from=document.getElementById('noteFrom').value.trim()||'— with love 🤍';
-  if(!text)return;
-  const c=noteTypes[ni++%4];
-  const card=document.createElement('div');
-  card.className=`note-card ${c}`;
-  card.innerHTML=`<div class="note-quote">"</div><p class="note-text">${text}</p><p class="note-from">${from}</p>`;
-  document.getElementById('notesGrid').insertBefore(card, document.querySelector('.note-add'));
-  document.getElementById('noteText').value='';
-  document.getElementById('noteFrom').value='';
-}
-
-// Add video
-function addVideo(){
-  const raw=document.getElementById('videoUrl').value.trim();
-  const caption=document.getElementById('videoCaption').value.trim()||'a beautiful memory 🎞️';
-  if(!raw)return;
-  let embed=raw;
-  const yt=raw.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
-  if(yt) embed=`https://www.youtube.com/embed/${yt[1]}`;
-  const vm=raw.match(/vimeo\.com\/(\d+)/);
-  if(vm) embed=`https://player.vimeo.com/video/${vm[1]}`;
-  const card=document.createElement('div');
-  card.className='video-card';
-  card.innerHTML=`<div class="video-frame"><iframe src="${embed}" allow="autoplay;fullscreen" allowfullscreen></iframe></div><div class="video-info"><p>${caption}</p></div>`;
-  document.getElementById('videoGrid').insertBefore(card, document.querySelector('.video-add'));
-  document.getElementById('videoUrl').value='';
-  document.getElementById('videoCaption').value='';
-}
 </script>
 </body>
 </html>
